@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -8,15 +7,6 @@ public class Inventory : MonoBehaviour
 
 
     public Slot[] GetAllSlot() => slots;
-    public List<Slot> GetSlotsIsItem()
-    {
-        var slotIsItem = new List<Slot>();
-        foreach (Slot slot in slots)
-        {
-            if(slot.IsItem()) slotIsItem.Add(slot);
-        }
-        return slotIsItem;
-    }
     public Slot GetEmptySlot()
     {
         foreach (Slot slot in slots)

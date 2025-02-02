@@ -14,6 +14,7 @@ public class SaveData
         this.slots = slots;
     }
 }
+
 [Serializable]
 public class SlotData
 {

@@ -68,11 +68,15 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        RestartGame(100, 100, new SlotData[3]
+        RestartGame(100, 100, new SlotData[7]
         {
             new(0,1,50),
             new(1,0,100),
-            new(2,6,6)
+            new(2,6,6),
+            new(3,2,1),
+            new(4,3,1),
+            new(5,4,1),
+            new(6,5,1)
         });
     }
     public SaveData Load()=> SaveSessionManager.LoadData();

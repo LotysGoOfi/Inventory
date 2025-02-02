@@ -13,11 +13,9 @@ public class Player
     [SerializeField]
     private int arrmorBody;
 
-    public Player(int helthPoint, int arrmorHead, int arrmorBody)
+    public Player(int helthPoint)
     {
         this.helthPoint = helthPoint;
-        this.arrmorHead = arrmorHead;
-        this.arrmorBody = arrmorBody;
     }
 
     public int ArrmorHead { get => arrmorHead; set => arrmorHead = value; }

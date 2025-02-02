@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -7,6 +6,7 @@ using UnityEngine;
 public class SaveSessionManager 
 {
     private static readonly string DATA_FILE_PATH = Application.persistentDataPath + "/Data.tz";
+
     public static void SaveData(Inventory inventory, Item[] items, int enemyHealthsPoint, int playerHealthsPoint)
     {
         var saveData = new SaveData(enemyHealthsPoint, playerHealthsPoint, SaveInventory(inventory, items));
@@ -15,6 +15,7 @@ public class SaveSessionManager
         bf.Serialize(file, saveData);
         file.Close();      
     }
+
     public static SaveData LoadData()
     {
         if (File.Exists(DATA_FILE_PATH))

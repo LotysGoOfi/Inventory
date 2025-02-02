@@ -11,15 +11,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isPistol = false;
 
-    private Inventory currentInventory;
-
     [SerializeField]
     private GameObject gameOverPanel;
+
+    private Inventory currentInventory;
 
     public void StartGame(Inventory inventory,int healthsPlayer)
     {
         currentInventory = inventory; 
-        player = new Player(healthsPlayer, 0, 0);
+        player = new Player(healthsPlayer);
         helthsBar.SetHealth(healthsPlayer);
         inventory.GetBodySlot().updateArnorBody.AddListener(AddArmorBody);
         inventory.GetHeadSlot().updateArnorHead.AddListener(AddArmorHead);
